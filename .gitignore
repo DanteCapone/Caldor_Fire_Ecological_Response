@@ -1,0 +1,34 @@
+# Data and writing are stored separately and are not tracked in Git
+data/
+writing/
+
+# Generated analysis products
+figures/
+figures_v2/
+models/
+_output/
+
+# Office and presentation files
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.pdf
+
+# R artifacts
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Local workspace files
+CascadeProjects/
+scripts/_audit_tmp*.R
+project_state/*.md
+windsurf_session_log.md

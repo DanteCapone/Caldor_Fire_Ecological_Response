@@ -1,0 +1,86 @@
+analysis: Figure 5 quantitative synthesis
+biological_data_used_to_define_windows_or_pcas: no
+primary_antecedent_rule: fixed_jul01_aug13
+primary_antecedent_start_month_day: 07-01
+primary_antecedent_end_month_day: 08-13
+panel_b_pm_window_rule: fixed_aug01_dec31_matched_to_biological_response
+panel_b_pm_start_month_day: 08-01
+panel_b_pm_end_month_day: 12-31
+event_sensitivity_window_rule: fixed_aug14_oct21
+event_sensitivity_start_month_day: 08-14
+event_sensitivity_end_month_day: 10-21
+smoke_day_definition: NOAA HMS smoke over Lake Tahoe with composite daily PM2.5 >=
+  9.1 ug m^-3
+minimum_annual_daily_coverage: 0.8
+primary_exposure_metric: sum of daily PM2.5 on NOAA HMS smoke days with PM2.5 >= 9.1
+  ug m^-3 during August 1-December 31; threshold is not subtracted
+panel_b_exposure_axis_transform: linear native-unit scale
+exposure_sensitivity_metrics:
+- qualifying smoke-day count during August 14-October 21
+- sum(max(PM2.5 - 9.1, 0)) on qualifying HMS smoke days
+- cumulative PM2.5 on HMS smoke days
+- cumulative PM2.5 excess above the reference-year calendar-day median on HMS smoke
+  days
+antecedent_variables:
+- mixed_layer_thermal_contrast_c
+- mixed_layer_shallowness_m
+- surface_temperature_0_10m_c
+mixed_layer_depth_transform: mixed_layer_shallowness_m = -1 * mixed_layer_depth_m
+pca_fit_years:
+- 2006.0
+- 2007.0
+- 2010.0
+- 2012.0
+- 2013.0
+- 2014.0
+- 2015.0
+- 2016.0
+- 2017.0
+- 2018.0
+- 2019.0
+- 2022.0
+- 2023.0
+- 2024.0
+- 2025.0
+pca_excluded_focal_years:
+- 2011
+- 2020
+- 2021
+pca_projection_years:
+- 2006.0
+- 2007.0
+- 2010.0
+- 2011.0
+- 2012.0
+- 2013.0
+- 2014.0
+- 2015.0
+- 2016.0
+- 2017.0
+- 2018.0
+- 2019.0
+- 2020.0
+- 2021.0
+- 2022.0
+- 2023.0
+- 2024.0
+- 2025.0
+pca_orientation: positive net alignment with warmer surface water, greater mixed-layer
+  thermal contrast, and shallower mixed layer
+schmidt_stability_role: external validation using years with a qualifying full-depth
+  cast; not a PCA input; no interpolation or deep-water extrapolation
+biological_response_window: August 1-December 31
+biological_depth_integration_m:
+- 5.0
+- 20.0
+- 40.0
+- 60.0
+- 75.0
+- 90.0
+plotted_biological_response_metric: trapezoidal temporal AUC of date-level 5-90 m
+  depth-integrated Leptolyngbya abundance
+biological_minimum_dates: 3
+biological_minimum_span_days: 60.0
+recovery_time_origin: '2021-08-14'
+active_fire_end: '2021-10-21'
+final_figure: figures/figure_5_nmds_braycurtis/figure_5_final.png
